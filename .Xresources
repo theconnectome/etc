@@ -1,0 +1,41 @@
+!!URxvt Settings
+URxvt*dynamicColors: on
+URxvt*depth: 30
+URxvt*scrollBar: false
+URxvt*cursorBlink: true
+URxvt*cursorUnderline: false
+URxvt*savelines: 1024
+URxvt*shading: 60
+
+!!URxvt Fonts
+URxvt*font: xft:berry:size=9
+URxvt*boldFont: xft:berry:size=9
+
+*background: #140b0b
+*foreground: #ddeedd
+
+### CUSTOM
+! black
+*color0: #202020
+*color8: #565656
+! red
+*color1: #cc5947
+*color9: #e24b34
+! green
+*color2: #5c8f42
+*color10: #77b557
+! yellow
+*color3: #ffaa45
+*color11: #ffbd70
+! blue
+*.color4: #395b73
+*.color12: #3f769d
+! magenta
+*color5: #947c8b
+*color13: #bf679d
+! cyan
+*color6: #357a66
+*color14: #68b09a
+! white
+*color7: #ddeedd
+*color15: #eeffee
