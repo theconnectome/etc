@@ -67,7 +67,7 @@ Quiz Step 4: Label the data columns with descriptive variable names
 - Write the new and improved descriptive names back to the data.frame as column names.
 
 
-Quiz Step 5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+Quiz Step 5: From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject.
 --------------------
 - Create a "by activity" data.frame, with overall means for each measurement for each activity, for all subjects
 - Create a "by subject" data.frame, with overall means for each measurement for each subject, for all activities
