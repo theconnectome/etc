@@ -1,4 +1,4 @@
-Summary
+Analysis of Samsung Data
 ====================
 The included R script, "run_analysis.R," does the following:
 - 1. Merges the training and the test sets to create one data set.
@@ -27,15 +27,15 @@ Examine of the dimensions of the imported data
 --------------------
 
 **We learn from dim() that:**
-- 1) The test and training datasets have different numbers of rows, but the same number of columns (561). This is also the same number of feature names.
-- 2) The subjectTest, the xTest, and yTest datasets all have the same number of rows (2946).
-- 3) The subjectTrain, xTrain, and yTrain datasets all have the same number of rows (7351).
+- The test and training datasets have different numbers of rows, but the same number of columns (561). This is also the same number of feature names.
+- The subject_test, the X_test, and y_test datasets all have the same number of rows (2946).
+- The subject_train, X_train, and y_train datasets all have the same number of rows (7351).
 
 **So logically, we should do the following:**
-- 1) Apply the 561 feature names as column names for the test and training datasets.
-- 2) Attach the subjectTest and yTest datasets as columns onto the sides of the xTest dataset.
-- 3) Attach the subjectTrain and yTrain datasets as columns onto the sides of the xTrain dataset.
-- 4) Apply the activity labels to their corresponding numbers.
+- Apply the 561 feature names as column names for the test and training datasets.
+- Attach the subject_test and y_test datasets as columns onto the sides of the X_test dataset.
+- Attach the subject_train and y_train datasets as columns onto the sides of the X_train dataset.
+- Apply the activity labels to their corresponding numbers.
 
 
 Quiz Step 1: Merge all the data sets
