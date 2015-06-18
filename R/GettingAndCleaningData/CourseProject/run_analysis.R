@@ -19,7 +19,7 @@ file_path5 = "test/y_test.txt"
 yTest <- read.table(file_path5, header = FALSE)
 
 
-# Load train data ----------------------------------------------
+# Load training data -------------------------------------------
 
 file_path6 = "train/subject_train.txt"
 subjectTrain <- read.table(file_path6, header = FALSE)
@@ -97,8 +97,8 @@ mergedNarrow <- mergedFull[, meanStdList]
 # Load dplyr, which we're going to need for the rest of this.
 library(dplyr)
 
-# "BY SUBJECT AND ACTIVITY" DATA.FRAME: overall means for each 
-# measurement for each subject, grouped by activity
+# "BY SUBJECT AND ACTIVITY" DATA.FRAME: means for each measurement's
+# of the means and daviations for each subject, grouped by activity
 subjectActivityFrame <- mergedNarrow %>% group_by(Subject, 
                 Activity) %>% summarise_each(funs(mean))
 
@@ -119,13 +119,14 @@ subjectActivityFrame$Activity <- activityLabels[,2]
 
 
 
-# 4. Label the data set with descriptive variable names --------------
+# 4. Label the data columns with descriptive variable names --------------
 
 # Read out the list of columns names from meansFrame as a 
 # character vector, so we can search-and-replace
 # strings inside of it.
 colNamesList <- as.list(colnames(subjectActivityFrame))
 
+# Replace each component of each name with a more descriptive one.
 colNamesList <- gsub("\\-mean\\(\\)", " - mean", colNamesList)
 colNamesList <- gsub("\\-meanFreq\\(\\)", " - mean frequency", colNamesList)
 colNamesList <- gsub("\\-std\\(\\)", " - standard deviation", colNamesList)
