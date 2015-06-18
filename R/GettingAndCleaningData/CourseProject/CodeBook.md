@@ -1,3 +1,6 @@
+Code Book for Samsung Data
+===================
+
 - "Subject"
 - "Activity"
 - "Time for body accelerometer - mean for the X axis"
