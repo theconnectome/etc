@@ -159,8 +159,12 @@ colnames(subjectActivityFrame) <- colNamesList
 
 # "BY ACTIVITY" DATA.FRAME: overall means for each measurement
 # for each activity, for all subjects
-activityFrame <- select(subjectActivityFrame, -Subject) %>% 
-        group_by(Activity) %>% 
+# (For this one, we first have to re-group the source data.frame 
+# by "Activity," because we can't remove the "Subject"
+# column as long as it's the "group_by" column.)
+activityFrame <- subjectActivityFrame %>% group_by(Activity) %>% 
+                summarise_each(funs(mean))
+activityFrame <- select(activityFrame, -Subject) %>% group_by(Activity) %>% 
         summarise_each(funs(mean))
 
 # "BY SUBJECT" DATA.FRAME: overall means for each measurement
@@ -169,12 +173,11 @@ subjectFrame <- select(subjectActivityFrame, -Activity) %>%
         group_by(Subject) %>% 
         summarise_each(funs(mean))
 
-# "MEANS ONLY" DATA.FRAME (just for fun): overall means for 
-# each measurement ONLY
-meansOnlyFrame <- select(subjectActivityFrame, -Subject, -Activity) %>% 
-        summarise_each(funs(mean))
+# Bind those two datasets to create a final tidy data set with 
+# the average of each variable for each activity and each subject.
+finalFrame <- cbind(activityFrame, subjectFrame)
 
-write.table(subjectActivityFrame, file="TidyDataSet.txt", row.names=FALSE)
+write.table(finalFrame, file="TidyDataSet.txt", row.names=FALSE)
 
 
 

@@ -48,7 +48,7 @@ Quiz Step 1: Merge all the data sets
 
 Quiz Step 2: Extract the mean and standard deviation for each measurement
 --------------------
-- Make a list of all columns whose names contain the words "mean" or "std" (plus "Subject" and Activity").
+- Make a list of all columns whose names contain the words "mean" or "std" (plus "Subject" and Activity"). **Note:** I've chosen to exclude the "angle" variables, even though they contain the word "mean," because they measure angles, rather than the means themselves.
 - Create a data.frame with only mean and std measurements, along with subject numbers and activities.
 - Create a narrower data frame with means for each measurement's means and standard deviations for each subject, grouped by activity.
 
@@ -71,6 +71,7 @@ Quiz Step 5: From the data set in step 4, create a second, independent tidy data
 --------------------
 - Create a "by activity" data.frame, with overall means for each measurement for each activity, for all subjects
 - Create a "by subject" data.frame, with overall means for each measurement for each subject, for all activities
+- Bind those two datasets to create a final tidy data set with the average of each variable for each activity and each subject.
 
 
 
