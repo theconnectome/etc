@@ -173,11 +173,8 @@ subjectFrame <- select(subjectActivityFrame, -Activity) %>%
         group_by(Subject) %>% 
         summarise_each(funs(mean))
 
-# Bind those two datasets to create a final tidy data set with 
-# the average of each variable for each activity and each subject.
-finalFrame <- cbind(activityFrame, subjectFrame)
-
-write.table(finalFrame, file="TidyDataSet.txt", row.names=FALSE)
+# But actually, we're going to write out 
+write.table(subjectActivityFrame, file="TidyDataSet.txt", row.names=FALSE)
 
 
 
