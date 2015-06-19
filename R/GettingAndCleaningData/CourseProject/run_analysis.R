@@ -173,7 +173,7 @@ subjectFrame <- select(subjectActivityFrame, -Activity) %>%
         group_by(Subject) %>% 
         summarise_each(funs(mean))
 
-# But actually, we're going to write out 
+# Write out the tidy data set to the txt file.
 write.table(subjectActivityFrame, file="TidyDataSet.txt", row.names=FALSE)
 
 

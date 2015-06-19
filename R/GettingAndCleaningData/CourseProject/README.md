@@ -69,7 +69,7 @@ Quiz Step 4: Label the data columns with descriptive variable names
 
 Quiz Step 5: From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject.
 --------------------
-- Since we already created a nicely summarized and labeled data frame in Steps 2 to 4, just write that data.frame to the txt file.
+- Summarize the data by subject, then by activity, and write that data.frame to the txt file.
 
 
 
