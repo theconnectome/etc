@@ -68,10 +68,10 @@ alias l='ls -CF'
 alias ls='ls -h --color=auto'
 
 alias update='sudo apt-get update && sudo apt-get upgrade'
-alias i3config='nano ~/.i3/config'
+alias i3config='nano ~/.config/i3/config'
 alias restartvpn='systemctl restart openvpn@vpnht-128.service'
 
-alias aomx='cd /home/ben/.wine/drive_c/Program\ Files\ (x86)/Microsoft\ Games/Age\ of\ Mythology\ Gold\ Edition/ && aomx.exe xres=1920 yres-1080'
+alias aomx='cd /home/ben/.wine/drive_c/Program\ Files\ \(x86\)/Microsoft\ Games/Age\ of\ Mythology\ Gold\ Edition/ && wine aomx.exe xres=1920 yres=1080'
 
 #export PS1='\[\033[00;32m\]\u@\h \[\033[00;32m\]\W \$ \[\033[00m\]'
 
